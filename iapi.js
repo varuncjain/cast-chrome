@@ -104,7 +104,7 @@ cast.LaunchRequest = function(activityType, receiver) {
   /**
    * @type {cast.Receiver}
    */
-  this['receiver'] = receiver; // Can't use @expose
+  this.receiver = receiver;
 
   /**
    * Launch parameters to be passed with the receiver application as URL.  A
