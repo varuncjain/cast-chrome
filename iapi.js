@@ -1,16 +1,16 @@
 /**
- * Copyright (C) 2013 Google Inc. All Rights Reserved. 
+ * Copyright (C) 2013 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at 
+ * You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software 
+ * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and 
+ * See the License for the specific language governing permissions and
  * limitations under the License.
  */
 
@@ -58,7 +58,7 @@ cast.Receiver = function(id, name) {
   /**
    * The tab projection status of the tab hosting this API instance.  This is
    * only set the first time the receiver is provided to the page using the API.
-   * Its value is true if the tab is being projected to this
+   * Its value is true if the tab is being casted to this
    * receiver, null otherwise.
    *
    * @type {?boolean}
@@ -104,7 +104,7 @@ cast.LaunchRequest = function(activityType, receiver) {
   /**
    * @type {cast.Receiver}
    */
-  this.receiver = receiver;
+  this['receiver'] = receiver; // Can't use @expose
 
   /**
    * Launch parameters to be passed with the receiver application as URL.  A
